@@ -227,6 +227,9 @@ int wpa3_parse_sae_msg(u8 *buf, u32 len, u32 sae_msg_type, u16 status)
     return ret;
 }
 #else
+
+#include "utils/common.h"
+
 u8 *wpa3_build_sae_msg(u8 *bssid, u32 sae_msg_type, u32 *sae_msg_len)
 {
     return NULL;
